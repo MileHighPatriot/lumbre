@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Lumbre: a contemporary Mexican kitchen.
+  Bone paper, indigo, clay, and a chile accent. Fraunces for display, Outfit for the menu and the order.
+*/
+@theme {
+  --color-bone: #f4efe8;
+  --color-paper: #fbf7f2;
+  --color-ink: #1c1612;
+  --color-ink-soft: #5c5148;
+  --color-clay: #c4623a;
+  --color-clay-deep: #9a4528;
+  --color-anil: #1a3358;
+  --color-anil-deep: #10243f;
+  --color-chile: #8e2a2a;
+  --color-maize: #e2b15a;
+  --color-line: #e3d6c8;
+  --color-sage: #2f4a3e;
+
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-bone);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 560;
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-anil);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: #e2b15a;
+    color: #1c1612;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  body * { visibility: hidden; }
+  #ticket, #ticket * { visibility: visible; }
+  #ticket { position: absolute; inset: 0; background: white; }
+}
+
+.wrap {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.tile-wash {
+  background-color: #f4efe8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpath d='M36 8l6 10h-12zM36 64l-6-10h12zM8 36l10-6v12zM64 36l-10 6V30z' fill='none' stroke='%231a3358' stroke-opacity='0.08'/%3E%3Ccircle cx='36' cy='36' r='3' fill='none' stroke='%238e2a2a' stroke-opacity='0.14'/%3E%3C/svg%3E");
 }
