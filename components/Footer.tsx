@@ -15,8 +15,8 @@ export default function Footer() {
             {site.address.neighborhood}, {site.address.city}, {site.address.region}
           </p>
           <p className="mt-3"><a className="inline-flex min-h-11 items-center underline" href={site.phoneHref}>Call {site.phone}</a></p>
-          <p><a className="underline" href={`mailto:${site.email}`}>{site.email}</a></p>
-          <p className="mt-2"><a className="underline" href={site.mapsHref}>Directions to the neighborhood</a></p>
+          <p><a className="inline-flex min-h-11 items-center underline" href={`mailto:${site.email}`}>{site.email}</a></p>
+          <p><a className="inline-flex min-h-11 items-center underline" href={site.mapsHref}>Directions to the neighborhood</a></p>
         </div>
         <div>
           <h2 className="font-sans text-sm font-semibold tracking-normal">Hours, Denver time</h2>

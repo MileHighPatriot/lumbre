@@ -55,7 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <aside aria-label="Concept project notice" className="border-b border-line bg-maize/40">
             <p className="wrap py-2 text-sm">
               Concept project: a sample site built by 5280 Web Solutions. Lumbre is not a real restaurant.{" "}
-              <a href={site.studio} className="font-semibold underline">See more at 5280webs.com</a>
+              <a href={site.studio} className="inline-flex min-h-11 items-center font-semibold underline">See more at 5280webs.com</a>
             </p>
           </aside>
           <Header />

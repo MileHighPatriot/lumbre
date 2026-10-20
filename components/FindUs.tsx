@@ -31,7 +31,7 @@ export default function FindUs() {
         <div>
           <h3 className="text-4xl">Call or order</h3>
           <p className="mt-3 text-sm text-ink-soft">
-            {site.phone} is a sample number. Call it to ask about a table. This site does not book a table, and an order stays on this phone.
+            {"(303) 555-0148 is a sample number and doesn't reach anyone. This site doesn't book tables, and an order stays on this phone."}
           </p>
           <div className="mt-4 flex flex-col gap-3">
             <a href={site.phoneHref} className="inline-flex min-h-12 items-center justify-center rounded-full bg-clay-deep px-6 font-semibold text-paper">

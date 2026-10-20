@@ -22,7 +22,10 @@ export default function OpenGraphImage() {
       >
         <div style={{ display: "flex", fontSize: 28, letterSpacing: 4, color: "#e2b15a" }}>SANTA FE DRIVE · DENVER</div>
         <div style={{ display: "flex", fontSize: 120, lineHeight: 0.9 }}>Lumbre</div>
-        <div style={{ display: "flex", fontSize: 36 }}>Fire, masa, and a long table.</div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div style={{ display: "flex", fontSize: 36 }}>Fire, masa, and a long table.</div>
+          <div style={{ display: "flex", marginTop: 20, fontSize: 28, color: "#e2b15a" }}>Concept project · sample site by 5280 Web Solutions</div>
+        </div>
       </div>
     ),
     { ...size },

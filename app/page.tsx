@@ -25,7 +25,7 @@ export default function Home() {
               <Link href="/order" className="inline-flex min-h-12 items-center justify-center rounded-full bg-clay-deep px-6 font-semibold text-paper">Start an order</Link>
               <a href={site.phoneHref} className="inline-flex min-h-12 items-center justify-center rounded-full px-6 font-semibold ring-1 ring-inset ring-bone">Call {site.phone}</a>
             </div>
-            <Link href="/menu" className="mt-4 inline-block font-semibold underline decoration-bone/50 underline-offset-4">Read the menu</Link>
+            <Link href="/menu" className="mt-4 inline-flex min-h-11 items-center font-semibold underline decoration-bone/50 underline-offset-4">Read the menu</Link>
           </div>
           <OpenChip light />
         </div>
@@ -36,7 +36,7 @@ export default function Home() {
       <section className="wrap py-16">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-4xl sm:text-5xl">From the board</h2>
-          <Link href="/menu" className="text-sm font-semibold underline">Full menu</Link>
+          <Link href="/menu" className="inline-flex min-h-11 shrink-0 items-center text-sm font-semibold underline">Full menu</Link>
         </div>
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {signatureIds.map((id) => {
