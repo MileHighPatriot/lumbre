@@ -103,7 +103,7 @@ function ItemForm({ editor, onClose }: { editor: Editor; onClose: () => void }) 
               maxLength={140}
               onChange={(event) => setNote(event.target.value)}
               rows={2}
-              className="mt-2 w-full rounded-xl border border-line bg-bone px-3 py-2 font-normal"
+              className="mt-2 w-full rounded-xl border border-line bg-bone px-3 py-2 text-base font-normal"
             />
           </label>
 
@@ -143,7 +143,7 @@ function ItemForm({ editor, onClose }: { editor: Editor; onClose: () => void }) 
               if (item.alcohol) setDraft({ age: true });
               commitEditor(qty, picks, note);
             }}
-            className="min-h-12 rounded-full bg-clay px-5 font-semibold text-paper aria-disabled:bg-line aria-disabled:text-ink-soft"
+            className="min-h-12 rounded-full bg-clay-deep px-5 font-semibold text-paper aria-disabled:bg-line aria-disabled:text-ink-soft"
           >
             {editor.lineId ? "Update" : "Add"} · {money(total)}
             {base < item.price ? <span className="ml-2 line-through opacity-70">{money((item.price + extras) * qty)}</span> : null}

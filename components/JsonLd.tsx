@@ -8,8 +8,8 @@ export default function JsonLd() {
     name: site.name,
     servesCuisine: "Mexican",
     url: site.url,
-    telephone: site.phone,
     priceRange: "$$",
+    image: [`${site.url}/photos/table.webp`],
     address: {
       "@type": "PostalAddress",
       addressLocality: site.address.city,

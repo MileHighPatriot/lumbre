@@ -10,10 +10,12 @@ export default function Plate({
   photo,
   className = "object-cover",
   priority = false,
+  sizes = "(min-width: 1024px) 50vw, 100vw",
 }: {
   photo: PhotoId;
   className?: string;
   priority?: boolean;
+  sizes?: string;
 }) {
   const [failed, setFailed] = useState(false);
   if (failed) {
@@ -28,10 +30,11 @@ export default function Plate({
       src={asset(photos[photo].src)}
       alt={photos[photo].alt}
       fill
-      priority={priority}
-      sizes="(min-width: 1024px) 40vw, 100vw"
+      sizes={sizes}
       className={className}
+      decoding="async"
       onError={() => setFailed(true)}
+      {...(priority ? { priority: true } : { loading: "lazy" as const })}
     />
   );
 }

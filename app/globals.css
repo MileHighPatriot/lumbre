@@ -40,9 +40,14 @@
     letter-spacing: -0.03em;
     line-height: 0.98;
   }
+  /*
+    A light ring inside a dark ring. The light ring shows on the indigo
+    hero and the footer. The dark ring shows on the bone page.
+  */
   :focus-visible {
     outline: 2px solid var(--color-anil);
-    outline-offset: 3px;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--color-bone);
   }
   ::selection {
     background: #e2b15a;
