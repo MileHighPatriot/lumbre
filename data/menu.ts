@@ -62,6 +62,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "queso-fundido",
+    photo: "queso-fundido",
     name: "Queso fundido",
     description: "Chihuahua and Oaxaca melted with roasted poblano. Corn tortillas on the side.",
     price: 1300,
@@ -73,6 +74,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "chile-con-queso",
+    photo: "chile-con-queso",
     name: "Chile con queso",
     description: "Melted cheese with green chile, for dipping with tortilla chips.",
     price: 900,
@@ -84,6 +86,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "elote",
+    photo: "elote",
     name: "Elote",
     description: "Grilled corn on the cob with mayonnaise, cotija, chile, and lime.",
     price: 700,
@@ -95,6 +98,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "esquites",
+    photo: "esquites",
     name: "Esquites",
     description: "The same grilled corn cut off the cob, in a cup, with cheese, chile, and lime.",
     price: 700,
@@ -106,6 +110,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "ceviche",
+    photo: "ceviche",
     name: "Ceviche de pescado",
     description: "White fish cured in lime with tomato, onion, cilantro, and avocado. Tostadas on the side.",
     price: 1600,
@@ -115,6 +120,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "empanadas",
+    photo: "empanadas",
     name: "Empanadas de picadillo",
     description: "Three baked flour empanadas filled with beef, potato, raisin, and olive.",
     price: 1200,
@@ -123,6 +129,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "sopes",
+    photo: "sopes",
     name: "Sopes",
     description: "Three thick masa boats with beans, crema, lettuce, and the topping you pick.",
     price: 1300,
@@ -133,6 +140,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "nachos",
+    photo: "nachos",
     name: "Nachos de la casa",
     description: "Corn chips, beans, melted cheese, crema, pickled jalapeño, and a topping.",
     price: 1400,
@@ -143,6 +151,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "tortilla-soup",
+    photo: "tortilla-soup",
     name: "Sopa de tortilla",
     description: "Tomato and pasilla broth, made without chicken stock, with crisp tortilla strips, avocado, crema, and queso fresco.",
     price: 1100,
@@ -163,6 +172,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "caldo-de-res",
+    photo: "caldo-de-res",
     name: "Caldo de res",
     description: "Beef shank with cabbage, carrot, potato, and corn, and a side of rice. Lime and cilantro at the table.",
     price: 1550,
@@ -172,6 +182,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-salad",
+    photo: "taco-salad",
     name: "Ensalada de taco",
     description: "Lettuce, beans, cheese, crema, and pico in a fried corn tortilla bowl.",
     price: 1400,
@@ -193,6 +204,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-asada",
+    photo: "taco-asada",
     name: "Taco de carne asada",
     description: "Chopped grilled steak with onion and cilantro.",
     price: 450,
@@ -203,6 +215,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-carnitas",
+    photo: "taco-carnitas",
     name: "Taco de carnitas",
     description: "Pork cooked slowly in its own fat until the edges crisp, with onion and cilantro.",
     price: 450,
@@ -213,6 +226,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-pollo",
+    photo: "taco-pollo",
     name: "Taco de pollo asado",
     description: "Grilled chicken with onion, cilantro, and a squeeze of lime.",
     price: 450,
@@ -223,6 +237,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-hongos",
+    photo: "taco-hongos",
     name: "Taco de hongos",
     description: "Mushrooms cooked with garlic and guajillo, with onion and cilantro.",
     price: 450,
@@ -235,6 +250,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-nopal",
+    photo: "taco-nopal",
     name: "Taco de nopal",
     description: "Grilled cactus with onion and cilantro.",
     price: 450,
@@ -246,6 +262,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-papa",
+    photo: "taco-papa",
     name: "Taco de papa",
     description: "Potatoes with rajas, onion, and cilantro.",
     price: 450,
@@ -258,6 +275,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-pescado",
+    photo: "taco-pescado",
     name: "Taco de pescado",
     description: "Grilled white fish, cabbage, and a chipotle crema. Not part of the Tuesday bundle.",
     price: 550,
@@ -268,6 +286,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-camaron",
+    photo: "taco-camaron",
     name: "Taco de camarón",
     description: "Garlic shrimp, cabbage, and salsa verde. Not part of the Tuesday bundle.",
     price: 575,
@@ -289,6 +308,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "taco-plate",
+    photo: "taco-plate",
     name: "Plato de tacos",
     description: "Three tacos of one protein. This is a plate, not the street-taco bundle.",
     price: 1650,
@@ -299,6 +319,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "burrito-pastor",
+    photo: "burrito-pastor",
     name: "Burrito al pastor",
     description: "Al pastor, rice, beans, cheese, and salsa in a flour tortilla.",
     price: 1450,
@@ -309,6 +330,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "burrito-asada",
+    photo: "burrito-asada",
     name: "Burrito de carne asada",
     description: "Grilled steak, rice, beans, cheese, and salsa in a flour tortilla.",
     price: 1550,
@@ -318,6 +340,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "burrito-carnitas",
+    photo: "burrito-carnitas",
     name: "Burrito de carnitas",
     description: "Crisped carnitas, rice, beans, cheese, and salsa in a flour tortilla.",
     price: 1450,
@@ -327,6 +350,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "burrito-pollo",
+    photo: "burrito-pollo",
     name: "Burrito de pollo",
     description: "Grilled chicken, rice, beans, cheese, and salsa in a flour tortilla.",
     price: 1400,
@@ -336,6 +360,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "burrito-hongos",
+    photo: "burrito-hongos",
     name: "Burrito de hongos",
     description: "Mushrooms, rajas, rice, beans, and cheese in a flour tortilla.",
     price: 1350,
@@ -347,6 +372,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "burrito-birria",
+    photo: "burrito-birria",
     name: "Burrito de birria",
     description: "Beef birria and a little consomé, with cheese, in a flour tortilla.",
     price: 1650,
@@ -369,6 +395,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "enchiladas-verdes",
+    photo: "enchiladas-verdes",
     name: "Enchiladas verdes",
     description: "Three corn tortillas in a tomatillo and green chile sauce.",
     price: 1650,
@@ -380,6 +407,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "enchiladas-mole",
+    photo: "enchiladas-mole",
     name: "Enchiladas de mole",
     description: "Three corn tortillas covered in the house mole and sesame.",
     price: 1800,
@@ -391,6 +419,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "enchiladas-suizas",
+    photo: "enchiladas-suizas",
     name: "Enchiladas suizas",
     description: "Three corn tortillas in tomatillo sauce, baked under melted cheese and crema.",
     price: 1750,
@@ -414,6 +443,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "tamales",
+    photo: "tamales",
     name: "Plato de tamales",
     description: "Two tamales in their husks. Masa is corn.",
     price: 1500,
@@ -425,6 +455,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "flautas",
+    photo: "flautas",
     name: "Flautas",
     description: "Three crisp corn tortillas rolled around shredded chicken, with crema and lettuce.",
     price: 1550,
@@ -435,6 +466,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "chimichanga",
+    photo: "chimichanga",
     name: "Chimichanga",
     description: "A flour tortilla stuffed with carne asada and cheese, fried, and topped with ranchera and crema.",
     price: 1650,
@@ -444,6 +476,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "chile-colorado",
+    photo: "chile-colorado",
     name: "Chile colorado",
     description: "Beef simmered in a dried red chile sauce. The beans are on the side, not in the stew.",
     price: 1800,
@@ -454,6 +487,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "chile-verde",
+    photo: "chile-verde",
     name: "Chile verde",
     description: "Pork in tomatillo and green chile.",
     price: 1800,
@@ -464,6 +498,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "carnitas-plate",
+    photo: "carnitas-plate",
     name: "Plato de carnitas",
     description: "A plate of crisped carnitas with onion and cilantro.",
     price: 1850,
@@ -495,6 +530,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "fajita-pollo",
+    photo: "fajita-pollo",
     name: "Fajitas de pollo",
     description: "Grilled chicken with bell pepper and onion.",
     price: 1900,
@@ -505,6 +541,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "fajita-steak",
+    photo: "fajita-steak",
     name: "Fajitas de res",
     description: "Grilled steak with bell pepper and onion.",
     price: 2200,
@@ -515,6 +552,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "fajita-camaron",
+    photo: "fajita-camaron",
     name: "Fajitas de camarón",
     description: "Shrimp with bell pepper and onion.",
     price: 2300,
@@ -538,6 +576,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "fajita-veg",
+    photo: "fajita-veg",
     name: "Fajitas de verduras",
     description: "Mushrooms, nopal, and rajas with bell pepper and onion.",
     price: 1700,
@@ -550,6 +589,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "kids-quesadilla",
+    photo: "kids-quesadilla",
     name: "Quesadilla",
     description: "A flour tortilla with cheese. Mild.",
     price: 700,
@@ -559,6 +599,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "kids-tacos",
+    photo: "kids-tacos",
     name: "Dos tacos",
     description: "Two soft corn tacos. Mild.",
     price: 800,
@@ -569,6 +610,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "kids-enchilada",
+    photo: "kids-enchilada",
     name: "Enchilada de queso",
     description: "One cheese enchilada in a mild red sauce.",
     price: 800,
@@ -579,6 +621,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "kids-burrito",
+    photo: "kids-burrito",
     name: "Burrito de frijol",
     description: "Bean and cheese in a flour tortilla. Mild.",
     price: 800,
@@ -587,6 +630,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "arroz",
+    photo: "arroz",
     name: "Arroz",
     description: "Tomato rice.",
     price: 350,
@@ -596,6 +640,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "frijoles",
+    photo: "frijoles",
     name: "Frijoles",
     description: "Refried, or whole beans from the pot.",
     price: 350,
@@ -606,6 +651,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "tortillas-maiz",
+    photo: "tortillas-maiz",
     name: "Tortillas de maíz",
     description: "Three corn tortillas.",
     price: 200,
@@ -615,6 +661,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "tortillas-harina",
+    photo: "tortillas-harina",
     name: "Tortillas de harina",
     description: "Three flour tortillas.",
     price: 200,
@@ -623,6 +670,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "guac-side",
+    photo: "guac-side",
     name: "Side of guacamole",
     description: "A small cup of the same guacamole.",
     price: 350,
@@ -633,6 +681,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "chips",
+    photo: "chips",
     name: "Chips and salsa",
     description: "Totopos with the salsa of the day.",
     price: 400,
@@ -643,6 +692,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "crema",
+    photo: "crema",
     name: "Crema",
     description: "A small cup.",
     price: 100,
@@ -652,6 +702,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "flan",
+    photo: "flan",
     name: "Flan",
     description: "Vanilla custard with a caramel top.",
     price: 800,
@@ -660,6 +711,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "churros",
+    photo: "churros",
     name: "Churros",
     description: "Three ridged churros with cajeta.",
     price: 700,
@@ -668,6 +720,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "tres-leches",
+    photo: "tres-leches",
     name: "Tres leches",
     description: "A slice of sponge soaked in evaporated milk, condensed milk, and cream.",
     price: 800,
@@ -676,6 +729,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "sopapillas",
+    photo: "sopapillas",
     name: "Sopapillas",
     description: "Three puffed flour pastries with honey.",
     price: 600,
@@ -684,6 +738,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "horchata",
+    photo: "horchata",
     name: "Horchata",
     description: "Rice, cinnamon, and a little sugar, over ice.",
     price: 450,
@@ -693,6 +748,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "jamaica",
+    photo: "jamaica",
     name: "Jamaica",
     description: "Hibiscus, lime, and sugar, over ice.",
     price: 450,
@@ -702,6 +758,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "tamarindo",
+    photo: "tamarindo",
     name: "Tamarindo",
     description: "Tamarind, lime, and sugar, over ice.",
     price: 450,
@@ -711,6 +768,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "coke",
+    photo: "coke",
     name: "Mexican Coke",
     description: "Coca-Cola in a glass bottle.",
     price: 375,
@@ -719,6 +777,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "cafe",
+    photo: "cafe",
     name: "Café de olla",
     description: "Coffee brewed with cinnamon and piloncillo.",
     price: 350,
@@ -738,6 +797,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "margarita-picante",
+    photo: "margarita-picante",
     name: "Margarita picante",
     description: "The classic with muddled jalapeño and a chile-salt rim.",
     price: 1300,
@@ -748,6 +808,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "margarita-skinny",
+    photo: "margarita-skinny",
     name: "Margarita skinny",
     description: "Tequila, fresh lime, a splash of orange juice, and soda. No orange liqueur.",
     price: 1200,
@@ -757,6 +818,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "margarita-flight",
+    photo: "margarita-flight",
     name: "Flight of margaritas",
     description: "Three small pours: classic, spicy, and skinny.",
     price: 1800,
@@ -767,6 +829,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "paloma",
+    photo: "paloma",
     name: "Paloma",
     description: "Tequila, fresh grapefruit, lime, and soda.",
     price: 1100,
@@ -775,6 +838,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "michelada",
+    photo: "michelada",
     name: "Michelada",
     description: "Lager, lime, hot sauce, and a salted rim.",
     price: 800,
@@ -784,6 +848,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "modelo",
+    photo: "modelo",
     name: "Modelo Especial",
     description: "A 12 oz bottle.",
     price: 600,
@@ -793,6 +858,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "negra",
+    photo: "negra",
     name: "Negra Modelo",
     description: "A 12 oz bottle.",
     price: 600,
@@ -801,6 +867,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "pacifico",
+    photo: "pacifico",
     name: "Pacífico",
     description: "A 12 oz bottle.",
     price: 600,
@@ -810,6 +877,7 @@ export const menu: MenuItem[] = [
   }),
   dish({
     id: "victoria",
+    photo: "victoria",
     name: "Victoria",
     description: "A 12 oz bottle.",
     price: 600,

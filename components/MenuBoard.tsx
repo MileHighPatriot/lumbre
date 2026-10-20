@@ -6,6 +6,7 @@ import { TACO_BUNDLE_PRICE } from "@/data/promos";
 import type { PhotoId } from "@/data/photos";
 import { money } from "@/lib/format";
 import { useOrder } from "@/components/OrderProvider";
+import MenuThumb from "@/components/MenuThumb";
 import Plate from "@/components/Plate";
 
 const sectionPhoto: Partial<Record<CategoryId, PhotoId>> = {
@@ -83,7 +84,7 @@ export default function MenuBoard() {
                     <div className={item.photo ? "grid grid-cols-[4.75rem_1fr] gap-3 sm:grid-cols-[7.5rem_1fr] sm:gap-4" : ""}>
                       {item.photo && (
                         <div className="relative aspect-square overflow-hidden rounded-xl">
-                          <Plate photo={item.photo} sizes="120px" />
+                          <MenuThumb photo={item.photo} />
                         </div>
                       )}
                       <div>
