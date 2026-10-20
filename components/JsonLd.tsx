@@ -1,5 +1,6 @@
 import { categories, menu } from "@/data/menu";
-import { site } from "@/data/site";
+import { hours, site } from "@/data/site";
+import { dayNames } from "@/lib/format";
 
 export default function JsonLd() {
   const data = {
@@ -10,12 +11,19 @@ export default function JsonLd() {
     url: site.url,
     telephone: site.phone,
     priceRange: "$$",
+    image: [`${site.url}/photos/table.webp`],
     address: {
       "@type": "PostalAddress",
       addressLocality: site.address.city,
       addressRegion: site.address.region,
       addressCountry: "US",
     },
+    openingHoursSpecification: hours.map((row) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: `https://schema.org/${dayNames[row.day]}`,
+      opens: row.open,
+      closes: row.close,
+    })),
     description: `${site.description} Concept restaurant. Not a real business.`,
     hasMenu: {
       "@type": "Menu",

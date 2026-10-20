@@ -36,7 +36,7 @@ export default function PromotionsPage() {
               </li>
             ))}
           </ul>
-          <Link href="/order?promo=margarita" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-clay px-6 font-semibold text-paper">Order for Thursday</Link>
+          <Link href="/order?promo=margarita" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-clay-deep px-6 font-semibold text-paper">Order for Thursday</Link>
         </div>
       </article>
 

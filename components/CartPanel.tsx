@@ -99,7 +99,7 @@ export default function CartPanel({ idPrefix = "cart" }: { idPrefix?: string }) 
 
       <label className="mt-4 block text-sm font-semibold">
         Promo code
-        <input value={draft.code} onChange={(event) => setDraft({ code: event.target.value })} className="mt-1 w-full rounded-xl border border-line bg-bone px-3 py-2 font-normal uppercase" />
+        <input value={draft.code} onChange={(event) => setDraft({ code: event.target.value })} className="mt-1 w-full rounded-xl border border-line bg-bone px-3 py-2 text-base font-normal uppercase" />
       </label>
       {bill.code.message && <p className={`mt-2 text-sm ${bill.code.status === "applied" ? "text-sage" : "text-ink-soft"}`}>{bill.code.message}</p>}
       {when && bill.active.margarita && <p className="mt-2 text-sm text-sage">Noche de Margaritas is on for this time.</p>}
@@ -110,7 +110,7 @@ export default function CartPanel({ idPrefix = "cart" }: { idPrefix?: string }) 
       <dl className="mt-4 space-y-1 text-sm">
         <Row label="Food" value={money(bill.lines.reduce((sum, line) => sum + line.amount, 0))} />
         {bill.taco.savings > 0 && <Row label={bill.savingsNotes.find((note) => note.startsWith("Taco")) ?? "Taco Tuesday"} value={`−${money(bill.taco.savings)}`} />}
-        {draft.method === "delivery" && <Row label="Delivery" value={bill.deliveryFee ? money(bill.deliveryFee) : "—"} />}
+        {draft.method === "delivery" && <Row label="Delivery" value={deliveryLabel(draft.zip, bill.deliveryFee)} />}
         <Row label={salesTaxLabel} value={money(bill.tax)} />
         <Row label="Tip, on food" value={money(bill.tip)} />
         <div className="flex justify-between border-t border-line pt-2 text-base font-semibold">
@@ -159,7 +159,7 @@ export default function CartPanel({ idPrefix = "cart" }: { idPrefix?: string }) 
             id={`${idPrefix}-slot`}
             value={slot && slot.ymd === selectedDay ? slot.id : ""}
             onChange={(event) => setDraft({ slotId: event.target.value })}
-            className="mt-1 w-full rounded-xl border border-line bg-bone px-3 py-2 font-normal"
+            className="mt-1 w-full rounded-xl border border-line bg-bone px-3 py-2 text-base font-normal"
           >
             <option value="">Choose a time</option>
             {times.map((entry) => (
@@ -202,7 +202,7 @@ export default function CartPanel({ idPrefix = "cart" }: { idPrefix?: string }) 
         {draft.tipChoice === "custom" && (
           <label className="mt-2 block text-sm">
             Dollars
-            <input value={draft.tipCustom} inputMode="decimal" onChange={(event) => setDraft({ tipCustom: event.target.value, tipTouched: true })} className="mt-1 w-full rounded-xl border border-line bg-bone px-3 py-2" />
+            <input value={draft.tipCustom} inputMode="decimal" onChange={(event) => setDraft({ tipCustom: event.target.value, tipTouched: true })} className="mt-1 w-full rounded-xl border border-line bg-bone px-3 py-2 text-base" />
           </label>
         )}
         {message("tip") && <p className="mt-1 text-sm text-chile">{message("tip")}</p>}
@@ -235,13 +235,19 @@ export default function CartPanel({ idPrefix = "cart" }: { idPrefix?: string }) 
           if (!result.ok) return;
           setAttempted(false);
         }}
-        className="mt-5 min-h-12 w-full rounded-full bg-clay font-semibold text-paper"
+        className="mt-5 min-h-12 w-full rounded-full bg-clay-deep font-semibold text-paper"
       >
         Place order · {money(bill.total)}
       </button>
       <p className="mt-3 text-xs text-ink-soft">Pay at the window, or pay the driver. This site does not charge a card. Nothing is sent to a kitchen.</p>
     </div>
   );
+}
+
+function deliveryLabel(zip: string, fee: number) {
+  if ((DELIVERY_ZIPS as readonly string[]).includes(zip.trim())) return money(fee);
+  if (zip.trim()) return "Outside the zone";
+  return "Add a ZIP";
 }
 
 function Row({ label, value }: { label: string; value: string }) {
@@ -257,7 +263,7 @@ function Field({ id, label, value, onChange, error, autoComplete }: { id: string
   return (
     <label className="block text-sm font-semibold" htmlFor={id}>
       {label}
-      <input id={id} value={value} autoComplete={autoComplete} aria-invalid={Boolean(error)} onChange={(event) => onChange(event.target.value)} className="mt-1 w-full rounded-xl border border-line bg-bone px-3 py-2 font-normal" />
+      <input id={id} value={value} autoComplete={autoComplete} aria-invalid={Boolean(error)} onChange={(event) => onChange(event.target.value)} className="mt-1 w-full rounded-xl border border-line bg-bone px-3 py-2 text-base font-normal" />
       {error && <span className="mt-1 block font-normal text-chile">{error}</span>}
     </label>
   );

@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import { hours, site } from "@/data/site";
-import { dayNames, formatMinutes, toMinutes } from "@/lib/format";
+import HoursList from "@/components/HoursList";
 import OpenChip from "@/components/OpenChip";
+import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Visit",
   description: "Hours and the Santa Fe Drive neighborhood for Lumbre, a concept Mexican kitchen in Denver.",
 };
-
-const order = [1, 2, 3, 4, 5, 6, 0];
 
 export default function VisitPage() {
   return (
@@ -24,25 +22,20 @@ export default function VisitPage() {
         <section>
           <h2 className="text-3xl">Hours</h2>
           <p className="mt-2 text-sm text-ink-soft">Denver time. The last order window is 30 minutes before close.</p>
-          <ul className="mt-4 divide-y divide-line">
-            {order.map((day) => {
-              const row = hours.find((entry) => entry.day === day)!;
-              return (
-                <li key={day} className="flex justify-between py-2">
-                  <span>{dayNames[day]}</span>
-                  <span>{formatMinutes(toMinutes(row.open))} – {formatMinutes(toMinutes(row.close))}</span>
-                </li>
-              );
-            })}
-          </ul>
+          <HoursList className="mt-4 divide-y divide-line" />
         </section>
         <section className="rounded-2xl bg-paper p-6 ring-1 ring-line">
           <h2 className="text-3xl">Getting here</h2>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.16em] text-clay-deep">Sample address</p>
+          <p className="mt-2 text-lg">{site.address.street}</p>
+          <p>{site.address.neighborhood}, {site.address.city}, {site.address.region}</p>
           <p className="mt-3">Street parking along Santa Fe Drive and the side streets. Alameda Station is the closest light-rail stop to this stretch of the drive.</p>
-          <p className="mt-3">Phone <a className="underline" href={site.phoneHref}>{site.phone}</a></p>
-          <p>Email <a className="underline" href={`mailto:${site.email}`}>{site.email}</a></p>
-          <a href={site.mapsHref} className="mt-6 inline-flex min-h-12 items-center rounded-full bg-anil px-6 font-semibold text-bone">Map of the neighborhood</a>
-          <p className="mt-4 text-sm text-ink-soft">The printed concept address is {site.address.street}. It is not a real building.</p>
+          <p className="mt-3 text-sm text-ink-soft">The street is made up. The map opens the neighborhood, not a front door. Call the sample number to ask about a table. Nothing is booked on this site.</p>
+          <div className="mt-6 flex flex-col gap-3">
+            <a href={site.phoneHref} className="inline-flex min-h-12 items-center justify-center rounded-full bg-clay-deep px-6 font-semibold text-paper">Call {site.phone}</a>
+            <a href={site.mapsHref} className="inline-flex min-h-12 items-center justify-center rounded-full bg-anil px-6 font-semibold text-bone">Directions</a>
+          </div>
+          <p className="mt-4">Email <a className="underline" href={`mailto:${site.email}`}>{site.email}</a></p>
         </section>
       </div>
     </div>

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { menuById, signatureIds } from "@/data/menu";
+import { site } from "@/data/site";
 import { money } from "@/lib/format";
 import { Agave, Papel } from "@/components/art";
+import FindUs from "@/components/FindUs";
 import OpenChip from "@/components/OpenChip";
 import Plate from "@/components/Plate";
 
@@ -9,25 +11,27 @@ export default function Home() {
   return (
     <>
       <section className="grid lg:min-h-[calc(100vh-9rem)] lg:grid-cols-12">
-        <div className="relative min-h-80 lg:col-span-7 lg:min-h-full">
+        <div className="relative order-2 aspect-[3/2] lg:order-1 lg:col-span-7 lg:aspect-auto lg:h-full lg:min-h-full">
           <Plate photo="table" priority />
         </div>
-        <div className="flex flex-col justify-between bg-anil px-6 py-12 text-bone lg:col-span-5 lg:px-12 lg:py-16">
+        <div className="order-1 flex flex-col justify-between bg-anil px-6 py-8 text-bone sm:py-12 lg:order-2 lg:col-span-5 lg:px-12 lg:py-16">
           <p className="text-xs uppercase tracking-[0.22em] text-maize">Santa Fe Drive, Denver</p>
           <div>
-            <h1 className="max-w-xl text-5xl sm:text-7xl">Fire, masa, and a long table.</h1>
-            <p className="mt-6 max-w-md text-lg text-bone/85">
+            <h1 className="max-w-xl text-4xl sm:text-6xl lg:text-7xl">Fire, masa, and a long table.</h1>
+            <p className="mt-4 max-w-md text-base text-bone/90 sm:mt-6 sm:text-lg">
               Lumbre is a small Mexican kitchen. The salsa is made in the morning, al pastor turns on the trompo, and Thursday night the margaritas get serious.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/order" className="inline-flex min-h-12 items-center rounded-full bg-clay px-6 font-semibold text-paper">Start an order</Link>
-              <Link href="/menu" className="inline-flex min-h-12 items-center rounded-full px-6 font-semibold ring-1 ring-inset ring-bone/40">Read the menu</Link>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link href="/order" className="inline-flex min-h-12 items-center justify-center rounded-full bg-clay-deep px-6 font-semibold text-paper">Start an order</Link>
+              <a href={site.phoneHref} className="inline-flex min-h-12 items-center justify-center rounded-full px-6 font-semibold ring-1 ring-inset ring-bone">Call {site.phone}</a>
             </div>
+            <Link href="/menu" className="mt-4 inline-block font-semibold underline decoration-bone/50 underline-offset-4">Read the menu</Link>
           </div>
           <OpenChip light />
         </div>
       </section>
       <Papel />
+      <FindUs />
 
       <section className="wrap py-16">
         <div className="flex items-end justify-between gap-4">

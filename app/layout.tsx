@@ -33,8 +33,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: "Lumbre · Mexican kitchen on Santa Fe Drive", template: "%s · Lumbre" },
   description: site.description,
-  openGraph: { title: "Lumbre", description: site.description, locale: site.locale, type: "website", siteName: site.name },
-  twitter: { card: "summary_large_image", title: "Lumbre", description: site.description },
+  alternates: { canonical: "./" },
+  openGraph: {
+    description: site.description,
+    locale: site.locale,
+    type: "website",
+    siteName: site.name,
+  },
+  twitter: { card: "summary_large_image", description: site.description },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

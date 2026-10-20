@@ -9,11 +9,11 @@ export default function PromoBanner() {
   const now = useNow();
   const text = now ? banner(denver(now)) : { href: "/promotions", text: "See what is on this week." };
   return (
-    <div className="bg-chile text-bone">
-      <div className="wrap flex flex-wrap items-center justify-between gap-2 py-2 text-sm">
-        <p>{text.text}</p>
-        <Link href={text.href} className="font-semibold underline">Order for that window</Link>
-      </div>
-    </div>
+    <Link href={text.href} className="block bg-chile text-bone">
+      <span className="wrap flex min-h-11 items-center justify-between gap-3 py-2 text-sm">
+        <span>{text.text}</span>
+        <span className="shrink-0 font-semibold underline">Order</span>
+      </span>
+    </Link>
   );
 }
