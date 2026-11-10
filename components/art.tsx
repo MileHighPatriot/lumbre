@@ -13,7 +13,7 @@ export function Papel() {
   return (
     <div className="flex h-7 overflow-hidden text-chile" aria-hidden>
       {Array.from({ length: 24 }, (_, index) => (
-        <svg key={index} viewBox="0 0 36 28" className="h-7 w-9 shrink-0">
+        <svg key={index} viewBox="0 0 36 28" className="papel-flag h-7 w-9 shrink-0" style={{ "--i": index } as React.CSSProperties}>
           <path
             fill="currentColor"
             fillRule="evenodd"

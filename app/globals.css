@@ -79,3 +79,335 @@
   background-color: #f4efe8;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpath d='M36 8l6 10h-12zM36 64l-6-10h12zM8 36l10-6v12zM64 36l-10 6V30z' fill='none' stroke='%231a3358' stroke-opacity='0.08'/%3E%3Ccircle cx='36' cy='36' r='3' fill='none' stroke='%238e2a2a' stroke-opacity='0.14'/%3E%3C/svg%3E");
 }
+
+/* =====================================================================
+   Upgrade pass. Resting styles are the finished picture; motion is added
+   only under no-preference, scroll-linked motion only where supported.
+   ===================================================================== */
+.word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.word-rise {
+  display: inline-block;
+}
+.embers i {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 999px;
+  background: #f3c46a;
+  box-shadow: 0 0 8px 2px rgb(226 177 90 / 0.7);
+  opacity: 0;
+}
+.papel-flag {
+  transform-origin: 50% 0;
+}
+.dish-photo img,
+.drift-photo img {
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.dish,
+.promo {
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.35s;
+}
+@media (hover: hover) {
+  .dish:hover,
+  .promo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 26px 44px -30px rgb(28 22 18 / 0.55);
+  }
+  .dish:hover .dish-photo img {
+    transform: scale(1.07);
+  }
+}
+.taco-rail {
+  display: none;
+}
+.taco-salsa {
+  stroke-dasharray: 100;
+}
+
+@keyframes lu-word {
+  from {
+    transform: translateY(110%) rotate(4deg);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes lu-ember {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  55% {
+    transform: translate3d(18px, -42vh, 0) scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(-10px, -80vh, 0) scale(0.3);
+    opacity: 0;
+  }
+}
+@keyframes lu-sway {
+  from {
+    transform: rotate(-4deg) skewX(2deg);
+  }
+  to {
+    transform: rotate(4deg) skewX(-2deg);
+  }
+}
+@keyframes lu-ken {
+  from {
+    transform: scale(1.12);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes lu-rise {
+  from {
+    transform: translateY(34px);
+    opacity: 0.001;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes lu-unveil {
+  from {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(20px);
+  }
+  to {
+    clip-path: inset(-10% -5% -15% -5%);
+    transform: none;
+  }
+}
+@keyframes lu-drift {
+  from {
+    transform: scale(1.14) translateY(-4%);
+  }
+  to {
+    transform: scale(1.14) translateY(4%);
+  }
+}
+@keyframes lu-fill-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes lu-tortilla {
+  from {
+    transform: translateY(-70px) scale(1.25) rotate(-25deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes lu-drop {
+  from {
+    translate: 0 -46px;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+@keyframes lu-draw {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes lu-lime {
+  from {
+    transform: translate(60px, 60px) rotate(30deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes lu-step {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+    visibility: hidden;
+  }
+  16%,
+  84% {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-22px);
+    visibility: hidden;
+  }
+}
+@keyframes lu-step-first {
+  0%,
+  84% {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-22px);
+    visibility: hidden;
+  }
+}
+@keyframes lu-step-last {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+    visibility: hidden;
+  }
+  16%,
+  100% {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .word-rise {
+    animation: lu-word 0.8s cubic-bezier(0.2, 0.75, 0.15, 1) both;
+    animation-delay: calc(80ms + var(--i, 0) * 70ms);
+  }
+  .embers i {
+    animation: lu-ember var(--t, 10s) ease-out var(--w, 0s) infinite;
+  }
+  .papel-flag {
+    animation: lu-sway 2.8s ease-in-out infinite alternate;
+    animation-delay: calc(var(--i, 0) * -0.37s);
+  }
+  .hero-photo img {
+    animation: lu-ken 2.4s cubic-bezier(0.2, 0.75, 0.15, 1) both;
+  }
+
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: lu-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0px entry 240px;
+    }
+    .unveil {
+      animation: lu-unveil linear both;
+      animation-timeline: view();
+      animation-range: entry 0px entry 200px;
+    }
+    .drift-photo img {
+      animation: lu-drift linear both;
+      animation-timeline: view();
+      transition: none;
+    }
+
+    .taco {
+      height: 320vh;
+      view-timeline: --taco block;
+    }
+    .taco-stage {
+      position: sticky;
+      top: 7.25rem;
+      height: calc(100svh - 7.25rem);
+      display: flex;
+      align-items: center;
+    }
+    .taco-steps {
+      display: block;
+      position: relative;
+      min-height: 9.5rem;
+    }
+    .taco-step {
+      position: absolute;
+      inset: 0 0 auto 0;
+    }
+    .taco-rail {
+      display: block;
+    }
+    .taco-step,
+    .taco-rail i,
+    .taco-tortilla,
+    .taco-meat,
+    .taco-top,
+    .taco-salsa,
+    .taco-lime {
+      animation-duration: auto;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --taco;
+      animation-range: contain 0% contain 100%;
+    }
+    .taco-step {
+      animation-name: lu-step;
+      animation-range: contain var(--a) contain var(--b);
+    }
+    .taco-step:first-child {
+      animation-name: lu-step-first;
+    }
+    .taco-step:last-child {
+      animation-name: lu-step-last;
+    }
+    .taco-rail i {
+      animation-name: lu-fill-x;
+    }
+    .taco-tortilla {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation-name: lu-tortilla;
+      animation-range: entry 60% contain 6%;
+    }
+    .taco-meat {
+      animation-name: lu-drop;
+      animation-range: contain calc(22% + var(--j) * 16%) contain calc(30% + var(--j) * 16%);
+    }
+    .taco-top {
+      animation-name: lu-drop;
+      animation-range: contain calc(48% + var(--j) * 16%) contain calc(56% + var(--j) * 16%);
+    }
+    .taco-salsa {
+      animation-name: lu-draw;
+      animation-range: contain 74% contain 90%;
+    }
+    .taco-salsa + .taco-salsa {
+      animation-range: contain 80% contain 96%;
+    }
+    .taco-lime {
+      transform-box: fill-box;
+      animation-name: lu-lime;
+      animation-range: contain 86% contain 98%;
+    }
+    @media (min-width: 768px) {
+      .taco-stage {
+        top: 4rem;
+        height: calc(100svh - 4rem);
+      }
+      .taco-steps {
+        min-height: 10.5rem;
+      }
+    }
+  }
+}
